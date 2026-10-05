@@ -1,0 +1,99 @@
+{
+  "name": "NxtWave AI Workshop - Multi-Channel Registration & Referral Confirmation",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "nxtwave-register",
+        "options": {}
+      },
+      "id": "node-webhook",
+      "name": "Webhook: New Registration",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            { "name": "studentName", "value": "={{ $json.body.name }}" },
+            { "name": "email", "value": "={{ $json.body.email }}" },
+            { "name": "whatsapp", "value": "={{ $json.body.whatsapp }}" },
+            { "name": "college", "value": "={{ $json.body.college }}" },
+            { "name": "referralCode", "value": "={{ $json.body.referralCode }}" },
+            { "name": "referralLink", "value": "=https://nxtwave-ai-workshop.vercel.app?ref={{ $json.body.referralCode }}&utm_source=peer_referral" }
+          ]
+        },
+        "options": {}
+      },
+      "id": "node-transform",
+      "name": "Format Student Variables",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "sheetId": "YOUR_GOOGLE_SHEET_ID_HERE",
+        "range": "Registrations!A:K",
+        "options": {}
+      },
+      "id": "node-sheets",
+      "name": "Sync to Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 3,
+      "position": [680, 200]
+    },
+    {
+      "parameters": {
+        "phoneNumberId": "YOUR_WHATSAPP_PHONE_ID",
+        "recipientPhoneNumber": "={{ $json.whatsapp }}",
+        "template": "nxtwave_workshop_registration_confirmation",
+        "components": [
+          {
+            "type": "body",
+            "parameters": [
+              { "type": "text", "text": "={{ $json.studentName }}" },
+              { "type": "text", "text": "Build Your First AI Project in 60 Minutes" },
+              { "type": "text", "text": "={{ $json.referralLink }}" }
+            ]
+          }
+        ]
+      },
+      "id": "node-whatsapp",
+      "name": "Send WhatsApp Ticket & Referral Link",
+      "type": "n8n-nodes-base.whatsapp",
+      "typeVersion": 1,
+      "position": [680, 400]
+    },
+    {
+      "parameters": {
+        "fromEmail": "workshops@nxtwave.tech",
+        "toEmail": "={{ $json.email }}",
+        "subject": "Confirmed: Build Your First AI Project in 60 Minutes (Live Workshop Ticket)",
+        "html": "<h3>Hey {{ $json.studentName }}! 👋</h3><p>Your seat for <b>Build Your First AI Project in 60 Minutes</b> is officially confirmed!</p><p><b>Workshop Time:</b> Saturday, 7:00 PM IST</p><p><b>Your Personal Referral Link:</b> <a href=\"{{ $json.referralLink }}\">{{ $json.referralLink }}</a></p><p>Invite 3 classmates to unlock the <b>VIP AI Project Pack (50 Resume AI Project Ideas + Architecture Blueprints)</b>!</p>"
+      },
+      "id": "node-email",
+      "name": "Send Confirmation Email with Calendar Invite",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2,
+      "position": [900, 300]
+    }
+  ],
+  "connections": {
+    "Webhook: New Registration": {
+      "main": [
+        [ { "node": "Format Student Variables", "type": "main", "index": 0 } ]
+      ]
+    },
+    "Format Student Variables": {
+      "main": [
+        [ { "node": "Sync to Google Sheets", "type": "main", "index": 0 } ],
+        [ { "node": "Send WhatsApp Ticket & Referral Link", "type": "main", "index": 0 } ],
+        [ { "node": "Send Confirmation Email with Calendar Invite", "type": "main", "index": 0 } ]
+      ]
+    }
+  }
+}

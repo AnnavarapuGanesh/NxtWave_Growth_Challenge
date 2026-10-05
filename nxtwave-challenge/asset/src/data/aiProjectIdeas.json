@@ -1,0 +1,167 @@
+[
+  {
+    "id": "cse-1",
+    "branch": "CSE / IT",
+    "interest": "Web & Developer Tools",
+    "title": "AI Resume & Job Description Matcher with Interview Question Generator",
+    "tagline": "Takes a PDF resume + target JD and generates match score, gap analysis, and 5 tailored behavioral questions.",
+    "problemStatement": "Engineering students get rejected by ATS scanners without knowing why their resume failed keyword and skill matching.",
+    "architecture": "React frontend -> LLM Parser (Gemini API) -> Structured JSON output with ATS score and suggested improvements.",
+    "workshopFit": "Built and deployed in 40 minutes using React and Gemini API.",
+    "interviewTalkingPoint": "Demonstrates prompt engineering, structured JSON parsing, and handling file uploads with client-side state."
+  },
+  {
+    "id": "cse-2",
+    "branch": "CSE / IT",
+    "interest": "Software Engineering & Devops",
+    "title": "Git Commit Diff Explainer & Automated PR Release Notes Bot",
+    "tagline": "Paste any Git diff or code change to produce semantic human-readable release notes and unit test suggestions.",
+    "problemStatement": "Developers waste hours writing changelogs and pull request summaries for engineering standups.",
+    "architecture": "Git Diff parser -> Context-aware LLM prompt -> Markdown formatted PR summary with risk score.",
+    "workshopFit": "Teaches context window management and code syntax highlighting.",
+    "interviewTalkingPoint": "Highlights deep understanding of developer workflows and CI/CD automation."
+  },
+  {
+    "id": "cse-3",
+    "branch": "CSE / IT",
+    "interest": "Database & Backend",
+    "title": "Natural Language to SQL Query & Schema Safety Analyzer",
+    "tagline": "Type questions in plain English ('Show students with CGPA > 8.5 who missed Day 1') and receive validated SQL queries.",
+    "problemStatement": "Non-technical stakeholders and junior devs struggle with complex multi-table SQL joins.",
+    "architecture": "DB Schema context injection -> Few-shot prompt -> SQL Generator with destructive command validation.",
+    "workshopFit": "Explains system prompting and input sanitization to prevent accidental DROP TABLE commands.",
+    "interviewTalkingPoint": "Proves knowledge of relational databases, query execution safety, and few-shot LLM guidance."
+  },
+  {
+    "id": "cse-4",
+    "branch": "CSE / IT",
+    "interest": "AI Agents & Productivity",
+    "title": "Automated YouTube Technical Tutorial Summarizer & Quiz Generator",
+    "tagline": "Paste any coding lecture transcript to get structured concept bullet points and a 5-question self-assessment test.",
+    "problemStatement": "Students spend 3 hours watching video playlists when they only need core architectural principles.",
+    "architecture": "Transcript ingestion -> Recursive text chunking -> LLM concept extraction and interactive quiz component.",
+    "workshopFit": "Ideal 60-minute project demonstrating text transformation and interactive UI state.",
+    "interviewTalkingPoint": "Shows mastery of retrieval chunking, token optimization, and dynamic quiz state machines."
+  },
+  {
+    "id": "cse-5",
+    "branch": "CSE / IT",
+    "interest": "Cybersecurity & Code Quality",
+    "title": "Smart API Security & Hardcoded Secret Detector",
+    "tagline": "Scans code snippets for leaked API keys, unprotected endpoints, and SQL injection vulnerabilities.",
+    "problemStatement": "Student code repositories frequently leak AWS or Supabase keys onto public GitHub.",
+    "architecture": "Regex credential pattern matcher -> LLM security vulnerability auditor -> Remediation recommendation.",
+    "workshopFit": "Directly relevant to workshop safety guidelines and secure API key management.",
+    "interviewTalkingPoint": "Differentiates candidates on enterprise security awareness and secure software development lifecycle."
+  },
+  {
+    "id": "ece-1",
+    "branch": "ECE",
+    "interest": "Embedded Systems & IoT",
+    "title": "Natural Language IoT Device Rule Engine & Home Automation Agent",
+    "tagline": "Converts everyday English instructions into MQTT commands and Arduino/ESP32 micro-logic rules.",
+    "problemStatement": "Connecting hardware sensors to dynamic logical triggers usually requires manual firmware recompilation.",
+    "architecture": "Sensor telemetry schema -> LLM intent classifier -> MicroPython / C++ actuation command generator.",
+    "workshopFit": "Shows how software LLMs bridge the gap between high-level reasoning and low-level embedded hardware.",
+    "interviewTalkingPoint": "Proves ability to bridge hardware circuits and modern cloud AI APIs."
+  },
+  {
+    "id": "ece-2",
+    "branch": "ECE",
+    "interest": "Signal Processing & Communications",
+    "title": "AI Audio Noise Classifier & Sensor Signal Anomaly Detector",
+    "tagline": "Analyzes noisy sensor wave data to classify anomalous spikes, interference patterns, and telemetry health.",
+    "problemStatement": "Hardware engineers spend hours eyeballing oscilloscope and serial monitor logs for signal degradation.",
+    "architecture": "Time-series signal array -> Statistical feature extractor -> LLM diagnostic advisor with confidence interval.",
+    "workshopFit": "Transforms standard ECE signal analysis into a modern AI diagnosis tool.",
+    "interviewTalkingPoint": "Demonstrates DSP knowledge combined with heuristic AI reasoning."
+  },
+  {
+    "id": "ece-3",
+    "branch": "ECE",
+    "interest": "VLSI & Hardware Design",
+    "title": "Verilog & VHDL Syntax Explainer & Testbench Generator",
+    "tagline": "Takes digital logic module definitions and automatically drafts Verilog testbench vectors and edge cases.",
+    "problemStatement": "Writing comprehensive hardware testbenches for FPGAs is tedious and prone to missing edge clock cycles.",
+    "architecture": "Verilog module port definition -> LLM combinatorial analyzer -> Structured testbench code generation.",
+    "workshopFit": "Combines digital electronics theory with modern generative engineering tools.",
+    "interviewTalkingPoint": "Proves deep grasp of finite state machines, clock timing, and automated verification."
+  },
+  {
+    "id": "eee-1",
+    "branch": "EEE",
+    "interest": "Power Systems & Renewable Energy",
+    "title": "Solar Inverter Fault Diagnostic & Power Yield Forecaster",
+    "tagline": "Takes voltage, current, and temperature sensor readings to diagnose photovoltaic string faults.",
+    "problemStatement": "Rooftop solar arrays lose up to 18% efficiency due to undetected shading, dust accumulation, or diode failure.",
+    "architecture": "Current-Voltage curve data -> Heuristic diagnostic engine -> Plain-English maintenance instructions.",
+    "workshopFit": "Hands-on workshop project bridging green energy transition with AI decision support.",
+    "interviewTalkingPoint": "Combines electrical power engineering with predictive maintenance."
+  },
+  {
+    "id": "eee-2",
+    "branch": "EEE",
+    "interest": "Electric Vehicles (EV)",
+    "title": "EV Battery State-of-Health (SoH) & Thermal Runaway Early Warning Assistant",
+    "tagline": "Monitors lithium-ion cell voltages and thermistor readings to compute battery degradation risks.",
+    "problemStatement": "Battery management systems require rapid, explainable diagnostics to prevent thermal emergencies.",
+    "architecture": "Cell telemetry log -> Anomaly classifier -> Instant emergency response protocol and driver advisory.",
+    "workshopFit": "High recruiter interest in automotive and clean tech engineering domains.",
+    "interviewTalkingPoint": "Demonstrates knowledge of BMS architecture and safety-critical software engineering."
+  },
+  {
+    "id": "mech-1",
+    "branch": "Mechanical",
+    "interest": "Manufacturing & Robotics",
+    "title": "CNC Tool Wear & Vibration Anomaly Diagnostic Assistant",
+    "tagline": "Processes accelerometer logs from milling machines to predict tool failure before workpiece damage.",
+    "problemStatement": "Unplanned cutting tool breakage causes expensive scrap and assembly line stoppages.",
+    "architecture": "Vibration frequency inputs -> LLM diagnostic synthesis -> Remaining Useful Life (RUL) estimation.",
+    "workshopFit": "Accessible mechanical domain project requiring zero physical lab equipment to prototype.",
+    "interviewTalkingPoint": "Bridges Industry 4.0, smart manufacturing, and software engineering in interviews."
+  },
+  {
+    "id": "mech-2",
+    "branch": "Mechanical",
+    "interest": "Thermal & Automotive",
+    "title": "Heat Exchanger Efficiency Calculator & Thermal Loss Explainer",
+    "tagline": "Takes fluid temperatures and flow rates to calculate heat transfer coefficients and recommend insulation.",
+    "problemStatement": "Mechanical engineers manually recalculate thermodynamic tables during HVAC and engine tuning.",
+    "architecture": "Thermal balance equation solver -> LLM diagnostic commentary and energy conservation recommendations.",
+    "workshopFit": "Clear input/output structure that can be built and deployed in 30 minutes.",
+    "interviewTalkingPoint": "Shows recruiters you can write production software for core mechanical physics problems."
+  },
+  {
+    "id": "civil-1",
+    "branch": "Civil",
+    "interest": "Structural & Construction Tech",
+    "title": "Concrete Crack Severity Classifier & Structural Inspection Assistant",
+    "tagline": "Upload crack descriptions or dimensional measurements to assess structural hazard levels per IS 456.",
+    "problemStatement": "Field structural inspections require immediate classification between surface hairline cracks and structural shear failures.",
+    "architecture": "Crack width/orientation context -> Structural safety prompt -> Remediation urgency score.",
+    "workshopFit": "Transforms traditional civil site inspections into a modern digital platform.",
+    "interviewTalkingPoint": "Demonstrates application of national building standards with intelligent software tooling."
+  },
+  {
+    "id": "career-1",
+    "branch": "All Branches",
+    "interest": "Campus Placements & Career",
+    "title": "AI Technical Interview Coach with Dynamic Follow-up Probing",
+    "tagline": "Conducts a simulated 5-minute technical interview tailored to your target company and grades your answers.",
+    "problemStatement": "Students fail campus interviews not from lack of coding knowledge, but from unstructured verbal communication.",
+    "architecture": "Role & company context -> LLM interviewer persona -> Multi-turn dialogue with instant communication rubric.",
+    "workshopFit": "Built live during the 60-minute workshop; students can immediately use it on themselves.",
+    "interviewTalkingPoint": "Self-referential project demonstrating conversational state, prompt chaining, and evaluation metrics."
+  },
+  {
+    "id": "career-2",
+    "branch": "All Branches",
+    "interest": "Campus Placements & Career",
+    "title": "Smart Cold Email & LinkedIn Pitch Personalizer for Recruiters",
+    "tagline": "Generates concise, non-spammy outreach emails citing specific company projects and matching candidate skills.",
+    "problemStatement": "Engineering students send generic copy-paste LinkedIn messages that recruiters delete immediately.",
+    "architecture": "Recruiter profile text + Student project summary -> LLM personalization prompt -> 3 tone variations.",
+    "workshopFit": "Quick 25-minute build that delivers immediate real-world career utility.",
+    "interviewTalkingPoint": "Shows understanding of persona-driven copywriting and token-efficient generative models."
+  }
+]
