@@ -11,15 +11,15 @@
 
 ## 🔗 Quick Links
 
-| What | Link |
+| Resource | Link |
 |---|---|
-| 🌐 Live demo | **YOUR_VERCEL_OR_NETLIFY_LINK** |
-| 🎥 3-minute video | **YOUR_VIDEO_LINK** |
-| 📊 5-slide growth plan | [`NxtWave_Growth_Plan_500_Registrations.pptx`](nxtwave-challenge/growth-plan/NxtWave_Growth_Plan_500_Registrations.pptx) |
+| 🌐 Live demo | [NxtWave Growth Challenge](https://nxt-wave-growth-challenge-one.vercel.app/) |
+| 🎥 3-minute video | [Google Drive Video](https://drive.google.com/file/d/1JnGN36-DE74cWfe3srx2bh-WvGUNyhqb/view?usp=sharing) |
+| 📊 5-slide growth plan | [NxtWave Growth Plan PPT](https://docs.google.com/presentation/d/1O4k-gFvEhzPLe_LwtuL0EnIDpP61EYl5/edit?usp=sharing) |
 | 📄 2-page summary | [`NxtWave_Growth_Plan_Summary.pdf`](nxtwave-challenge/growth-plan/NxtWave_Growth_Plan_Summary.pdf) |
 | 🧠 AI + learning notes | [`ai-notes.md`](nxtwave-challenge/learning-notes/ai-notes.md) |
 | 🔍 Reflection | [`reflection.md`](nxtwave-challenge/reflection.md) |
-| 💼 LinkedIn | **YOUR_LINKEDIN_URL** |
+| 💼 LinkedIn | [Annavarapu Ganesh](https://www.linkedin.com/in/annavarapu-ganesh-4159732a5/) |
 
 ---
 
